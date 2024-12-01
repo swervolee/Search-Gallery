@@ -1,5 +1,8 @@
+import React, {component} from "react";
 import logo from './logo.svg';
 import './App.css';
+import { HarshRouter, Route, Switch, Redirect} from "react-router-dom"
+import Header from "./components/Header";
 import PhotoContextProvider from './context/photoContext';
 
 function App() {
@@ -23,4 +26,4 @@ function App() {
   );
 }
 
-export default App;
+export default App; 

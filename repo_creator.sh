@@ -14,6 +14,21 @@ if [ ! -d .git ]; then
     echo "Git repository initialized."
 fi
 
+# Create .gitignore if it doesn't exist and add node_modules and pycache
+if [ ! -f .gitignore ]; then
+    echo ".gitignore file not found, creating one..."
+    touch .gitignore
+fi
+
+# Add node_modules and __pycache__ to .gitignore if not already present
+if ! grep -q "node_modules" .gitignore; then
+    echo "node_modules" >> .gitignore
+fi
+
+if ! grep -q "__pycache__" .gitignore; then
+    echo "__pycache__" >> .gitignore
+fi
+
 # Prompt user for repository details
 read -p "Enter repository name (default: current folder name): " repo_name
 repo_name=${repo_name:-$(basename "$PWD")}
@@ -36,7 +51,7 @@ if gh repo create "$repo_name" --description "$repo_description" --$repo_visibil
         echo "Pushing current branch to GitHub..."
         git add .
         git commit -m "Initial commit" 2> /dev/null || echo "No changes to commit."
-        git push -u origin main || echo "Error: Unable to push. Ensure the main branch exists and is configured."
+        git push -u origin master || echo "Error: Unable to push. Ensure the main branch exists and is configured."
     fi
 else
     echo "Error: Failed to create repository. Please check your inputs and try again."
