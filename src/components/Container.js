@@ -7,7 +7,7 @@ export default function Container({ searchTerm }) {
     const { images, loading, runSearch } = useContext(PhotoContext)
     useEffect(() => {
         runSearch(searchTerm);
-    })
+    }, [searchTerm])
 
     return (
         <div className="photo-container">
