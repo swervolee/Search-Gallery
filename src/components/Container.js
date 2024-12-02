@@ -12,7 +12,7 @@ export default function Container({ searchTerm }) {
 
     return (
         <div className="max-w-6xl mx-auto py-8">
-            <h1 className="text-3xl font-bold text-center mb-6 text-spotifyGreen">
+            <h1 className="text-3xl font-bold text-center mb-6 text-spotifyGreen z-2">
                 {searchTerm} Images
             </h1>
             <div className="photo-container bg-spotifyGray rounded-lg shadow-md p-4">

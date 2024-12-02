@@ -15,7 +15,7 @@ export default function Header() {
   return (
     <div className="bg-spotifyBlack text-white py-8 rounded-lg shadow-2xl">
       <div className="container mx-auto px-6 text-center">
-        <h2 className="text-4xl font-extrabold mb-6 text-spotifyGreen">Explore the Gallery</h2>
+        <h2 className="text-3xl font-extrabold mb-6 text-spotifyGreen">Explore the Gallery</h2>
         <Form handleSubmit={handleSubmit} />
         <Navigation />
       </div>
