@@ -4,14 +4,24 @@ import Gallery from "./Gallery";
 import Loader from "./Loader";
 
 export default function Container({ searchTerm }) {
-    const { images, loading, runSearch } = useContext(PhotoContext)
+    const { images, loading, runSearch } = useContext(PhotoContext);
+
     useEffect(() => {
         runSearch(searchTerm);
-    }, [searchTerm])
+    }, [searchTerm]);
 
     return (
-        <div className="photo-container">
-            {loading ? <Loader /> : <Gallery data={images} />}
+        <div className="max-w-6xl mx-auto py-8">
+            <h1 className="text-3xl font-bold text-center mb-6 text-spotifyGreen">
+                {searchTerm} Images
+            </h1>
+            <div className="photo-container bg-spotifyGray rounded-lg shadow-md p-4">
+                {loading ? (
+                    <Loader />
+                ) : (
+                    <Gallery data={images} />
+                )}
+            </div>
         </div>
     );
 };

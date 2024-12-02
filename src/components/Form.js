@@ -9,8 +9,8 @@ export default function Form({ handleSubmit }) {
 
   return (
     <form
-      className="search-form"
-      onSubmit={(e) => handleSubmit(e, searchEntry)}  // Handle form submission
+      className="flex items-center space-x-6 bg-white p-6 rounded-lg shadow-lg border border-gray-200"
+      onSubmit={(e) => handleSubmit(e, searchEntry)}
     >
       <input
         type="text"
@@ -18,17 +18,18 @@ export default function Form({ handleSubmit }) {
         placeholder="Search..."
         onChange={updateSearchInput}
         value={searchEntry}
+        className="flex-grow px-5 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-spotifyGreen text-gray-800"
       />
       <button
         type="submit"
-        className={`search-button ${searchEntry.trim() ? "active" : ""}`}
+        className={`px-5 py-3 bg-spotifyGreen text-white font-semibold rounded-md transition-colors duration-300 ${
+          searchEntry.trim() ? "hover:bg-spotifyDarkGreen" : "opacity-50 cursor-not-allowed"
+        }`}
         disabled={!searchEntry.trim()}
       >
-        <svg height={"32"} width={"32"}>
+        <svg height={"24"} width={"24"} className="fill-current">
           <path
             d="M19.427 21.427a8.5 8.5 0 1 1 2-2l5.585 5.585c.55.55.546 1.43 0 1.976l-.024.024a1.399 1.399 0 0 1-1.976 0l-5.585-5.585zM14.5 21a6.5 6.5 0 1 0 0-13 6.5 6.5 0 0 0 0 13z"
-            fill="#ffffff"
-            fillRule="evenodd"
           />
         </svg>
       </button>
