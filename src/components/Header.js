@@ -13,7 +13,7 @@ export default function Header() {
   };
 
   return (
-<div className="bg-gradient-to-r from-spotifyBlack via-spotifyGreen to-spotifyBlack text-white py-8 rounded-lg shadow-2xl">
+<div className="bg-gradient-to-r from-gray-800 to-green-700 text-white py-8 rounded-lg shadow-2xl">
   <div className="container mx-auto px-6 text-center">
     <h2 className="text-3xl font-extrabold mb-6 text-white">Explore the Gallery</h2>
     <Form handleSubmit={handleSubmit} />

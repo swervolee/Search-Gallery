@@ -3,10 +3,10 @@ import { NavLink } from "react-router-dom";
 
 
 const Navigation = () => {
-  const elements = ["Mountain", "Beaches", "Birds", "Food"];
+  const elements = ["Mountain", "Beach", "Bird", "Food"];
 
   return (
-    <nav className="bg-gradient-to-r from-spotifyGray via-spotifyBlack to-spotifyGray p-6 rounded-lg shadow-lg mt-6 max-w-6xl mx-auto">
+    <nav className="bg-black/30 backdrop-blur-md p-6 rounded-lg shadow-lg mt-6 max-w-6xl mx-auto">
       <ul className="flex flex-wrap justify-center gap-6  sm:gap-4">
         {elements.map((element) => (
           <li key={element} className="flex items-center justify-center">
