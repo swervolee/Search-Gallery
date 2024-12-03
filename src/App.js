@@ -13,7 +13,7 @@ class App extends Component {
     return (
       <PhotoContextProvider>
         <BrowserRouter>
-          <div className="container">
+          <div className="">
             <Header />
             <Routes>
               <Route path="/" element={<Navigate to="/mountain" />} />

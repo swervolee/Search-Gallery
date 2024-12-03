@@ -1,20 +1,21 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-export default function Navigation() {
-
+const Navigation = () => {
   const elements = ["Mountain", "Beaches", "Birds", "Food"];
 
   return (
-    <nav className="bg-white p-5 rounded-lg shadow-md mt-6">
-      <ul className="flex flex-wrap justify-center gap-4 sm:gap-6">
-        {elements.map(element => (
+    <nav className="bg-white p-6 rounded-lg shadow-lg mt-6 max-w-6xl mx-auto">
+      <ul className="flex flex-wrap justify-center gap-6">
+        {elements.map((element) => (
           <li key={element}>
             <NavLink
               to={element}
               className={({ isActive }) =>
-                `px-4 py-2 sm:px-6 sm:py-3 text-spotifyGreen font-medium rounded transition-all duration-300
-                ${isActive ? "bg-spotifyGreen text-white" : "hover:bg-spotifyGreen hover:text-white"}`
+                `px-6 py-3 text-lg font-semibold rounded-lg transition-all duration-300 ease-in-out 
+                ${isActive 
+                  ? "bg-spotifyGreen text-white shadow-md scale-105" 
+                  : "text-spotifyGreen hover:bg-spotifyGreen hover:text-white hover:shadow-lg transform hover:scale-105"}`
               }
             >
               {element}
@@ -24,4 +25,6 @@ export default function Navigation() {
       </ul>
     </nav>
   );
-}
+};
+
+export default Navigation;
