@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Item from "./components/item";
 import Search from "./components/Search";
 import NotFound from "./components/NotFound";
+import Footer from "./components/Footer";
 
 
 class App extends Component {
@@ -23,6 +24,7 @@ class App extends Component {
               <Route path="/search/:searchTerm" element={<Search />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
+            <Footer />
           </div>
         </BrowserRouter>
       </PhotoContextProvider>
