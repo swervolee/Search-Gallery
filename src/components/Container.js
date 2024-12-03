@@ -16,11 +16,8 @@ export default function Container({ searchTerm }) {
                 {searchTerm} Images
             </h1>
             <div className="photo-container bg-spotifyGray rounded-lg shadow-md p-4">
-                {loading ? (
-                    <Loader />
-                ) : (
-                    <Gallery data={images} />
-                )}
+                <Gallery data={images} />
+                {loading && <Loader />}
             </div>
         </div>
     );

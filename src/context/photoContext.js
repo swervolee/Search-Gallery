@@ -15,6 +15,7 @@ export default function PhotoContextProvider(props) {
         setQuery(newQuery);
         setPage(1);
         setLoading(true);
+        setImages([])
         axios.get(
             `https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${newQuery}&per_page=24&page=1&format=json&nojsoncallback=1`
         )
