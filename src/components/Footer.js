@@ -7,8 +7,8 @@ export default function Footer() {
             className="bg-spotifyBlack rounded pt-5 fixed bottom-0 left-0 w-full flex flex-wrap justify-center items-center"
             style={{ zIndex: 1000 }}
         >
-            <div className="mx-auto w-full max-w-screen-xl lg:py-8 flex items-center justify-center">
-                <div className="flex items-center justify-center flex-wrap">
+            <div className="mx-auto w-full max-w-screen-xl lg:py-1 flex items-center justify-center">
+                <div className="flex items-center justify-center flex-wrap my-auto">
                     <span className="text-sm text-center text-gray-500 sm:text-center dark:text-gray-400">
                         © 2024 <a href="https://search-gallery-sandy.vercel.app" className="hover:underline">Search Gallery™</a>
                     </span>
