@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ScrollTop({ Topper }) {
     return (
-        <div className="fixed bottom-10 right-2 sm:bottom-10 sm:right-5">
+        <div className="fixed bottom-10 right-0 sm:bottom-10 sm:right-5">
             <button
                 id="scrollToTop"
                 className="bg-gray-800 text-white p-2 rounded-full shadow-lg hover:bg-gray-700 focus:outline-none focus:ring focus:ring-gray-500 sm:p-3 md:p-4"
